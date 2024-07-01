@@ -17,6 +17,10 @@ main {
     background-size: cover;
 }
 
+main {
+    height: 90vh;
+}
+
 .banner {
     float: left;
     position: relative;
@@ -28,6 +32,10 @@ main {
     padding-left: 65px;
     padding-bottom: 150px;
     line-height: 15px;
+}
+
+lottie-player {
+    padding: 0px;
 }
 
 .banner-left .p1 {
@@ -325,7 +333,7 @@ h3 {
 }
 
 .image-side img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 10px;
 }
@@ -333,10 +341,6 @@ h3 {
 .description-side {
     flex: 2;
     padding: 20px;
-}
-
-.description-side .ex {
-    text-align: center;
 }
 
 .description-text {
@@ -379,6 +383,161 @@ h3 {
     background-color: #f0f0f0;
 }
 
+.wrapper {
+    height: 0vh;
+    background: #333;
+}
+
+#main-div {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 0;
+}
+
+#main-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    color: #0064f3;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#main-button~button {
+    visibility: hidden;
+    font-weight: 600;
+    height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #00a1f5, #0064f3);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .2s all linear;
+    -webkit-transition: .2s all linear;
+    -moz-transition: .2s all linear;
+    -ms-transition: .2s all linear;
+    -o-transition: .2s all linear;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#main-button.open~button {
+    visibility: visible;
+    right: 70px;
+    opacity: 1;
+    transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+
+#main-button~a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    opacity: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .2s all linear;
+    -webkit-transition: .2s all linear;
+    -moz-transition: .2s all linear;
+    -ms-transition: .2s all linear;
+    -o-transition: .2s all linear;
+}
+
+#main-button~.telegram-color {
+    background: linear-gradient(0deg, #017AB1, #01ABE6);
+}
+
+#main-button~.whatsapp-color {
+    background: linear-gradient(0deg, #00B100, #09db09);
+}
+
+#main-button~.messenger-color {
+    background: linear-gradient(0deg, #0078FF, #00C6FF);
+}
+
+#main-button.open~a {
+    opacity: 1;
+    transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+
+#main-button.open~a:nth-of-type(1) {
+    bottom: 60px;
+}
+
+#main-button.open~a:nth-of-type(2) {
+    bottom: 120px;
+}
+
+#main-button.open~a:nth-of-type(3) {
+    bottom: 180px;
+}
+
+.wave {
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0);
+    }
+}
+
+.open {
+    animation-iteration-count: 1;
+}
+
 .container2 {
     display: flex;
     height: auto;
@@ -404,9 +563,17 @@ h3 {
     box-sizing: border-box;
 }
 
+.description-text p {
+    width: 50%;
+    padding-left: 25%
+}
+
+;
+
 .ex {
     font-size: 24px;
     color: #333;
+    text-align: left;
 }
 
 .description-text {
@@ -676,8 +843,12 @@ ul li a:hover {
         display: flex;
         gap: 3px;
         margin-left: 2px;
-        margin-top: 30px;
+        margin-top: 10%;
         margin-bottom: 0px;
+    }
+
+    .banner-right {
+        height: 50%;
     }
 
     .banner-.right.p1 {
@@ -685,7 +856,6 @@ ul li a:hover {
     }
 
     lottie-player {
-        padding: 100% 10%;
         zoom: 120%;
     }
 
@@ -772,7 +942,7 @@ ul li a:hover {
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .experience-container{
+    .experience-container {
         display: flex;
         flex-direction: column;
     }
@@ -796,6 +966,22 @@ ul li a:hover {
         padding-left: 5%;
     }
 
+    .ex {
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+
+    .description-text p {
+        text-align: left;
+        height: 30%;
+        justify-content: left;
+    }
+
+    .image-side img {
+        padding-left: 35px;
+    }
+
     .image-side,
     .description-side {
         width: 90%;
@@ -809,7 +995,11 @@ ul li a:hover {
         align-self: center;
     }
 
-    .container2 .image-side img{
+    .container2 {
+        padding: 0%;
+    }
+
+    .container2 .image-side img {
         display: flex;
         height: 100%;
         justify-content: center;

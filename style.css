@@ -888,6 +888,8 @@ ul li a:hover {
 
     .banner-left .p1 {
         flex-wrap: wrap;
+        padding: 0;
+        text-align: justify;
     }
 
     .flex-row {

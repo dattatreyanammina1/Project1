@@ -10,21 +10,18 @@ body {
     margin: 0;
 }
 
-header,
 main {
-    background: url("https://buyreviews.hitechdonkey.com/assets/website-images/faded_yellow_circle.svg");
+    background: url("imgs/faded_yellow_circle.svg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-main {
-    height: 90vh;
+    height: 100vh;
 }
 
 .banner {
     float: left;
     position: relative;
     display: flex;
+    gap: 20px;
 }
 
 .banner-left {
@@ -34,12 +31,17 @@ main {
     line-height: 15px;
 }
 
-lottie-player {
-    padding: 0px;
-}
-
 .banner-left .p1 {
     line-height: 25px;
+    display: flex;
+    padding-right: 35%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.banner-right{
+    margin-left: 0%;
+    padding-left: 0%;
 }
 
 .flex-col {
@@ -83,7 +85,7 @@ lottie-player {
 }
 
 .h2 {
-    padding-top: 50%;
+    padding-top: 20%;
 }
 
 .flex-row {
@@ -98,18 +100,20 @@ lottie-player {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding-bottom: 20px;
     margin: 10px;
     background-color: #fff;
     border-radius: 8px;
     max-width: 1600px;
-    margin: 40px auto;
+    gap: 10%;
+    padding-right: 5%;
 }
 
 .experience-left {
     flex: 1;
     padding-right: 20px;
     text-align: left;
+    padding-bottom: 10px;
 }
 
 .experience-left p {
@@ -135,7 +139,7 @@ lottie-player {
 .s2,
 .s3 {
     font-size: 68px;
-    line-height: 83px;
+    line-height: 73px;
 }
 
 .s2,
@@ -197,6 +201,10 @@ lottie-player {
 .marquee-item img {
     display: block;
     width: 300px;
+}
+
+.section2{
+    padding-top: 20%;
 }
 
 @keyframes scrolling {
@@ -299,7 +307,7 @@ lottie-player {
     align-items: center;
     border: solid rgb(209 213 219) 1px;
     border-radius: 0.5rem;
-    padding: 0.7rem 0.6rem;
+    padding: 0.5rem 0.6rem;
     gap: 0.4rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -323,24 +331,23 @@ h3 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 20px;
+    margin: 10% 0;
 }
 
 .image-side {
     flex: 1;
     text-align: center;
-    padding: 20px;
 }
 
 .image-side img {
-    max-width: 80%;
-    height: auto;
     border-radius: 10px;
+    width: 190px;
+    height: 170px; 
 }
 
 .description-side {
     flex: 2;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .description-text {
@@ -568,12 +575,19 @@ h3 {
     padding-left: 25%
 }
 
-;
+.section5{
+    padding: 15% 0%;
+}
 
 .ex {
     font-size: 24px;
     color: #333;
     text-align: left;
+}
+
+.section5 .image-side .im{
+    width: 400px;
+    height: 300px;
 }
 
 .description-text {
@@ -584,7 +598,7 @@ h3 {
 
 .get-button {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 10px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
@@ -606,8 +620,8 @@ h3 {
     height: 230px;
 }
 
-.get-section h1 {
-    font-size: 50px;
+.get-section h2 {
+    font-size: 50%;
     color: rgb(44, 62, 80);
 }
 
@@ -649,6 +663,10 @@ h3 {
     color: rgb(44, 62, 80);
 }
 
+.get{
+    font-size: 45px;
+}
+
 .get-started-button {
     display: inline-block;
     padding: 15px 30px;
@@ -669,9 +687,9 @@ h3 {
 }
 
 footer {
-    background-color: rgb(241, 220, 112);
+    background-color: #FFE76B;
     color: black;
-    padding: 20px;
+    padding: 17px;
     display: flex;
     flex-direction: column;
 }
@@ -687,16 +705,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 5%;
 }
 
 .footer-logo {
     width: 150px;
     height: auto;
-    margin-bottom: 10px;
-}
-
-.footer-description {
-    margin-bottom: 20px;
 }
 
 .social-media-links {
@@ -723,6 +737,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 40%;
+    padding-right: 5%;
 }
 
 .quick-links,
@@ -732,7 +747,6 @@ footer {
 }
 
 .quick-links {
-    border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
 
@@ -843,7 +857,7 @@ ul li a:hover {
         display: flex;
         gap: 3px;
         margin-left: 2px;
-        margin-top: 10%;
+        margin-top: 13%;
         margin-bottom: 0px;
     }
 
@@ -925,7 +939,7 @@ ul li a:hover {
 
     .industries {
         display: grid;
-        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(2, 1fr);
         row-gap: 0.5rem;
         column-gap: 0.5rem;
@@ -950,8 +964,14 @@ ul li a:hover {
     .experience-left p {
         font-size: 30px;
         padding-left: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
         margin: 0;
+    }
+
+    .container1{
+        margin: 25% 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .container1,
@@ -960,31 +980,41 @@ ul li a:hover {
         align-items: center;
         justify-content: center;
         padding-left: 80px;
+        padding-bottom: 180px;
     }
 
     h3 {
         padding-left: 5%;
     }
 
+    h4 {
+        padding-left: 5%;
+    }
+
     .ex {
-        font-size: 24px;
+        font-size: 15px;
         color: #333;
         text-align: center;
     }
 
-    .description-text p {
+    .description-text {
         text-align: left;
-        height: 30%;
+        font-size: 80%;
         justify-content: left;
-    }
-
-    .image-side img {
-        padding-left: 35px;
     }
 
     .image-side,
     .description-side {
         width: 90%;
+    }
+
+    .image-side{
+        padding: 10px;
+    }
+
+    .container2 .image-side .im{
+        width: 200px;
+        height: 200px;
     }
 
     .container1 .image-side img {
@@ -1000,11 +1030,15 @@ ul li a:hover {
     }
 
     .container2 .image-side img {
-        display: flex;
-        height: 100%;
+        height: 100px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         align-self: center;
+    }
+
+    .section5{
+        padding: 30% 0;
     }
 
     .get {
@@ -1015,5 +1049,9 @@ ul li a:hover {
         margin: 0 0 20px;
         font-size: 2em;
         color: rgb(44, 62, 80);
+    }
+
+    .get-button{
+        margin-left: 30%;
     }
 }
